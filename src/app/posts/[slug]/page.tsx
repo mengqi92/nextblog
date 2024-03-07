@@ -8,14 +8,6 @@ import Container from "../../_components/container";
 import Header from "../../_components/header";
 import { PostBody } from "../../_components/post-body";
 import { PostHeader } from "../../_components/post-header";
-import "katex/dist/katex.min.css";
-import rehypeSanitize from 'rehype-sanitize'
-import rehypeStringify from 'rehype-stringify'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import remarkMath from 'remark-math'
-import rehypeKatex from "rehype-katex";
-import { unified } from 'unified'
 
 
 export default async function Post({ params }: Params) {
@@ -25,7 +17,7 @@ export default async function Post({ params }: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content || "");
+  const content = await markdownToHtml(post.content || "", post.math || false);
 
   return (
     <main>
