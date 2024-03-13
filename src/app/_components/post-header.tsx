@@ -9,9 +9,11 @@ type Props = {
   coverImage: string;
   date: string;
   author: Author;
+  category: string;
+  tags: string[];
 };
 
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({ title, coverImage, date, author, category, tags }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -27,6 +29,12 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
         </div>
         <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />
+        </div>
+        <div className="mb-6 text-lg">
+          {category}
+        </div>
+        <div className="mb-6 text-lg">
+          {tags}
         </div>
       </div>
     </>

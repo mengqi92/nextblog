@@ -10,6 +10,8 @@ export type Post = {
   ogImage: {
     url: string;
   };
+  category: string;
+  tags: string[];
   content: string;
   preview?: boolean;
   // LaTeX rendering needed. 
