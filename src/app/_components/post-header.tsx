@@ -3,6 +3,7 @@ import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
 import { type Author } from "@/interfaces/author";
+import {Chip} from "@nextui-org/react";
 
 type Props = {
   title: string;
@@ -31,7 +32,7 @@ export function PostHeader({ title, coverImage, date, author, category, tags }: 
           <DateFormatter dateString={date} />
         </div>
         <div className="mb-6 text-lg">
-          {category}
+          <Chip>{category}</Chip>
         </div>
         <div className="mb-6 text-lg">
           {tags}
