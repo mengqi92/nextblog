@@ -17,17 +17,12 @@ export function PostPreview({
 }: Props) {
   return (
       <div className="flex flex-col gap-2">
-        <div className="flex flex-col gap-2">
-          <Link className="text-2xl font-semibold hover:underline" href="/posts/[slug]" as={`/posts/${slug}`}>
+        <div className="group flex flex-row justify-between gap-2">
+          <Link className="transition-colors group-hover:text-fg-hover-color" href="/posts/[slug]" as={`/posts/${slug}`}>
             {title}
           </Link>
-          <p className="text-sm text-gray-500">
-            <DateFormatter dateString={date} />
-          </p>
+          <DateFormatter dateString={date} />
         </div>
-        <p className="text-sm leading-6">
-          {previewText}
-        </p>
       </div>
   );
 }
