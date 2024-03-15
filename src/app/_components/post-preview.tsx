@@ -1,31 +1,33 @@
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
+import { IsoDateTimeString } from "contentlayer/core";
 
 type Props = {
   title: string;
-  date: string;
+  date: IsoDateTimeString;
   slug: string;
+  previewText: string;
 };
 
 export function PostPreview({
   title,
   date,
   slug,
+  previewText
 }: Props) {
   return (
-    <div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link
-          as={`/posts/${slug}`}
-          href="/posts/[slug]"
-          className="hover:underline"
-        >
-          {title}
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
+          <Link className="text-2xl font-semibold hover:underline" href="/posts/[slug]" as={`/posts/${slug}`}>
+            {title}
+          </Link>
+          <p className="text-sm text-gray-500">
+            <DateFormatter dateString={date} />
+          </p>
+        </div>
+        <p className="text-sm leading-6">
+          {previewText}
+        </p>
       </div>
-    </div>
   );
 }

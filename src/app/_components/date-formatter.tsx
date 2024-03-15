@@ -1,12 +1,13 @@
 import { parseISO, format } from "date-fns";
+import { IsoDateTimeString } from "contentlayer/core";
 
 type Props = {
-  dateString: string;
+  dateString: IsoDateTimeString;
 };
 
 const DateFormatter = ({ dateString }: Props) => {
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "LLLL	d, yyyy")}</time>;
+  return <time dateTime={dateString}>{format(date, "yyyy-MM-dd")}</time>;
 };
 
 export default DateFormatter;
