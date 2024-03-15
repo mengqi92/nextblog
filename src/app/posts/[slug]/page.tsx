@@ -19,7 +19,7 @@ function getPostBySlug(slug: string) {
 const page = ({params}: PageProps) => {
   const post = getPostBySlug(params.slug);
   return (
-    <main className="bg-slate-50">
+    <main>
       <Container>
         <Header />
         <article className="prose lg:prose-xl mb-32">

@@ -23,8 +23,11 @@ export function PostHeader({ title, date, category, tags }: Props) {
           <Chip color="primary">{category}</Chip>
         </div>
         {tags.map(t => (
-          <Chip className="mr-1" variant="flat">{t}</Chip>
+          <Chip key={t} className="mr-1" variant="flat">{t}</Chip>
         ))}
+        <span id="busuanzi_container_page_pv">
+          本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
       </div>
     </>

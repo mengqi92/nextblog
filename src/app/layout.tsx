@@ -51,8 +51,9 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-slate-50`}>
         <Providers>
           <div className="min-h-screen">{children}</div>
           <Footer />
