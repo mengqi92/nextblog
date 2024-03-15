@@ -6,6 +6,7 @@ import { PostHeader } from "../../_components/post-header";
 import { allDocuments } from "../../../../.contentlayer/generated";
 import { MarkdownPost } from "@/app/_components/MarkdownPost";
 import { PageProps } from ".next/types/app/layout";
+import '@/lib/katex/katex.min.css'
 
 function getPostBySlug(slug: string) {
   const doc = allDocuments.find((doc) => doc.slugAsParams === slug);
@@ -58,11 +59,3 @@ export function generateMetadata({ params }: Params): Metadata {
     },
   };
 }
-
-// export async function generateStaticParams() {
-//   const posts = getAllPosts();
-
-//   return posts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
