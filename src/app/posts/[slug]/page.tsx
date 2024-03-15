@@ -1,11 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CMS_NAME } from "../../../lib/constants";
-import markdownToHtml from "../../../lib/markdownToHtml";
-import Alert from "../../_components/alert";
 import Container from "../../_components/container";
 import Header from "../../_components/header";
-import { PostBody } from "../../_components/post-body";
 import { PostHeader } from "../../_components/post-header";
 import { allDocuments } from "../../../../.contentlayer/generated";
 import { MarkdownPost } from "@/app/_components/MarkdownPost";
@@ -41,36 +37,6 @@ const page = ({params}: PageProps) => {
 
 export default page;
 
-// export default async function Post({ params }: Params) {
-//   const post = getPostBySlug(params.slug);
-
-//   if (!post) {
-//     return notFound();
-//   }
-
-//   const content = await markdownToHtml(post.content || "", post.math || false);
-
-//   return (
-//     <main className="bg-slate-50">
-//       <Alert preview={post.preview} />
-//       <Container>
-//         <Header />
-//         <article className="prose lg:prose-xl mb-32">
-//           <PostHeader
-//             title={post.title}
-//             coverImage={post.coverImage}
-//             date={post.date}
-//             author={post.author}
-//             category={post.category}
-//             tags={post.tags}
-//           />
-//           <PostBody content={content} />
-//         </article>
-//       </Container>
-//     </main>
-//   );
-// }
-
 type Params = {
   params: {
     slug: string;
@@ -84,7 +50,7 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Next.js Blog Example`;
 
   return {
     openGraph: {

@@ -72,7 +72,7 @@ export default makeSource({
             // @ts-expect-error rehype-katex types are wrong
             rehypeKatex,
             rehypeSlug,
-            rehypeAutolinkHeadings,
+            [rehypeAutolinkHeadings, 'after'],
             // @ts-expect-error rehype-pretty-code types are wrong
             [rehypePrettyCode, {
                 theme: 'github-dark',

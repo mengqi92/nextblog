@@ -38,13 +38,5 @@ const nextConfig = {
         return config;
     },
 }
-const withMDX = createMDX({
-        extension: /\.mdx?$/,
-        // Add markdown plugins here, as desired
-        options: {
-            remarkPlugins: [remarkMath],
-            rehypePlugins: [rehypeKatex],
-        },
-    })
 
-export default withMDX(nextConfig)
+export default nextConfig;
