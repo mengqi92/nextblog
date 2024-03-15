@@ -1,6 +1,5 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { MDXComponents } from "mdx/types";
-// import Image, { ImageProps } from 'next/image'
 import { Link } from "@nextui-org/react";
 
 const components: MDXComponents = {

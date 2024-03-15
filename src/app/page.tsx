@@ -7,7 +7,6 @@ export default function Index() {
   return (
     <main>
       <Container>
-        <Intro />
         {allPosts.length > 0 && <MoreStories posts={allPosts} />}
       </Container>
     </main>

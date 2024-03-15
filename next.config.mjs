@@ -1,7 +1,3 @@
-import createMDX from '@next/mdx';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // show remote images
@@ -15,28 +11,7 @@ const nextConfig = {
         ],
     },
 
-    // mathjax support
     pageExtensions: ['js', 'jsx', 'mdx', 'md', 'ts', 'tsx'],
-    // Support loading `.md`, `.mdx`:
-    webpack(config, options) {
-        config.module.rules.push({
-            test: /\.mdx?$/,
-            use: [
-                // The default `babel-loader` used by Next:
-                options.defaultLoaders.babel,
-                {
-                    loader: "@mdx-js/loader",
-                    /** @type {import('@mdx-js/loader').Options} */
-                    options: {
-                        /* jsxImportSource: …, otherOptions… */
-                        remarkPlugins: [remarkMath],
-                        rehypePlugins: [rehypeKatex]
-                    },
-                },
-            ],
-        });
-        return config;
-    },
 }
 
 export default nextConfig;

@@ -67,13 +67,11 @@ export default makeSource({
     contentDirPath: 'src/content',
     documentTypes: [Post],
     mdx: {
-        remarkPlugins: [remarkMath, remarkGfm],
+        remarkPlugins: [remarkGfm, remarkMath],
         rehypePlugins: [
-            // @ts-expect-error rehype-katex types are wrong
-            rehypeKatex,
             rehypeSlug,
+            rehypeKatex as any,
             [rehypeAutolinkHeadings, 'after'],
-            // @ts-expect-error rehype-pretty-code types are wrong
             [rehypePrettyCode, {
                 theme: 'github-dark',
                 onVisitLine(node: { children: string | any[] }) {
