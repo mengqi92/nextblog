@@ -1,8 +1,8 @@
-import { Post } from "@/interfaces/post";
 import { PostPreview } from "./post-preview";
+import { DocumentTypes } from ".contentlayer/generated"
 
 type Props = {
-  posts: Post[];
+  posts: DocumentTypes[];
 };
 
 export function MoreStories({ posts }: Props) {
@@ -16,11 +16,8 @@ export function MoreStories({ posts }: Props) {
           <PostPreview
             key={post.slug}
             title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
+            date={post.createdDate}
             slug={post.slug}
-            excerpt={post.excerpt}
           />
         ))}
       </div>
