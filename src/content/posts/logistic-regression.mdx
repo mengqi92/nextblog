@@ -27,14 +27,19 @@ math: true
 而在 Logistic 回归中，我们使用一个函数来**限制假设函数的值域**，这个函数就叫做 Logistic 函数（Logistic Function，也叫 Sigmoid Function）。
 
 Logistic Function：
-$$g(z)=\frac{1}{1+e^{-z}}$$
+
+$$
+g(z)=\frac{1}{1+e^{-z}}
+$$
 
 它的函数图像：
 ![逻辑回归函数图像](https://blog.mengqi.life/images/logistic-regression/Logistic-curve.png)
 
 从图像中可以看出，逻辑回归函数将输入的$(-\infty, \infty)$空间映射到了$(0,1)$空间，即将值域限制在了$(0,1)$之内。 限制后的假设函数为：
 
-$$h_\theta (x)=g(\theta ^\top x)=\frac{1}{1+e^{-\theta ^\top x}}$$
+$$
+h_\theta (x)=g(\theta ^\top x)=\frac{1}{1+e^{-\theta ^\top x}}
+$$
 
 注意该假设函数中，只有一个参数：$\theta$，我们接下来就需要通过优化来求解这个参数，以确定分类模型。
 
@@ -43,7 +48,9 @@ $$h_\theta (x)=g(\theta ^\top x)=\frac{1}{1+e^{-\theta ^\top x}}$$
 
 这样看来，假设函数 $h_\theta (x)$ 可以看做是给定 x，其类别 y=1 的估计概率，即
 
-$$h_\theta (x)=P(y=1 \mid x;\theta )$$
+$$
+h_\theta (x)=P(y=1 \mid x;\theta )
+$$
 
 ## 四、寻求优化参数 $\theta$
 一般来说，寻找参数的过程就是优化目标函数的过程。
@@ -51,7 +58,11 @@ $$h_\theta (x)=P(y=1 \mid x;\theta )$$
 ### 4.1 线性回归的目标函数
 
 在线性回归中，我们的目标函数为：
-$$J(\theta )=\frac{1}{m} \sum_{i=1}^m \frac{1}{2} (h_\theta (x^{(i)})-y^{(i)})^2$$
+
+$$
+J(\theta )=\frac{1}{m} \sum_{i=1}^m \frac{1}{2} (h_\theta (x^{(i)})-y^{(i)})^2
+$$
+
 其中，$\frac{1}{2} (h_\theta (x^{(i)})-y^{(i)})^2$ 部分就是损失函数，即$Cost(h_\theta (x^{(i)}), y^{(i)})$
 
 线性回归的优化目标就是最小化这个目标函数，即让各个样本点的误差达到最小。
@@ -62,7 +73,9 @@ $$J(\theta )=\frac{1}{m} \sum_{i=1}^m \frac{1}{2} (h_\theta (x^{(i)})-y^{(i)})^2
 
 我们把 Logistic 回归的假设函数 $h_\theta (x)=\frac{1}{1+e^{-\theta ^\top x}}$ 代入到线性回归的损失函数中，得到：
 
-$$Cost(h_\theta (x), y) = \frac{1}{2} (h_\theta (x)-y)^2 = \frac{1}{1+e^{-\theta ^\top x}}$$
+$$
+Cost(h_\theta (x), y) = \frac{1}{2} (h_\theta (x)-y)^2 = \frac{1}{1+e^{-\theta ^\top x}}
+$$
 
 为简便起见，这里以后，将各个点的误差$h_\theta (x^{(i)})-y^{(i)}$简写为$h_\theta (x)-y$。
 
@@ -91,7 +104,10 @@ $$
 ##### 简化损失函数
 
 上面对数形式损失函数是分段形式的，我们可以将两个式子压缩成一个式子：
-$$Cost(h_\theta (x), y) = -ylog(h_\theta (x)) -(1-y)log(1-h_\theta (x))$$
+
+$$
+Cost(h_\theta (x), y) = -ylog(h_\theta (x)) -(1-y)log(1-h_\theta (x))
+$$
 
 当 y=0 时，取后半段；当 y=1 时，取前半段。
 
@@ -121,7 +137,10 @@ $$
 $$
 
 这里引入了一个新的参数：$\alpha$，表示迭代速度，在这里作为调控因子。另外式子中 $J(\theta)$ 关于 $\theta$ 的梯度可以计算得到：
-$$\frac{\partial}{\partial \theta_j} J(\theta) = \frac{1}{m} \sum_{i=1}^m(h_\theta (x^{(i)}) - y^{(i)})x_j^{(i)}$$
+
+$$
+\frac{\partial}{\partial \theta_j} J(\theta) = \frac{1}{m} \sum_{i=1}^m(h_\theta (x^{(i)}) - y^{(i)})x_j^{(i)}
+$$
 
 此外，还要注意的是，梯度下降法迭代时，是所有参数：$\theta_0, \theta_1, \cdots, \theta_n$ 同时迭代的，这个可以以向量形式进行批量计算。
 

@@ -22,7 +22,10 @@ modifiedDate: 2015-10-06 20:05:00
 ### 1.1 数学定义
 
 维基百科上，卷积的形式化定义如下：
-$$ f(x)*g(x) = \int_{-\infty}^{\infty} f(\tau)g(x-\tau) d\tau \tag{1} $$
+
+$$
+f(x)*g(x) = \int_{-\infty}^{\infty} f(\tau)g(x-\tau) d\tau \tag{1} 
+$$
 
 ### 1.2 直观解释
 
@@ -47,12 +50,15 @@ $$ f(x)*g(x) = \int_{-\infty}^{\infty} f(\tau)g(x-\tau) d\tau \tag{1} $$
 现在先定义一些符号：
 记天数为 $t$，每天输液的药量为 $\operatorname{m}(t)$, 药效函数为 $\operatorname{eff}(t)$，小明身上残留的药效为 $\operatorname{rest}(t)$
 其中药效函数：
-$$\operatorname{eff}(t) = 
+
+$$
+\operatorname{eff}(t) = 
 \begin{cases} 100 \% & \text{t=0}  \\
 80 \% & \text{t=1}  \\
 40 \% & \text{t=2}  \\
 0  \% & \text{t>=3}  \\
-\end{cases}$$
+\end{cases}
+$$
 
 下面观察一下小明从第一天起，连续三天输液后身上所留下的药效（假设每天药量固定为10）。
 - 第一天，小明去医院输完液后，药效为 10（$\operatorname{rest}(t) = \operatorname{m}(t)\cdot \operatorname{eff}(0)$）。
@@ -87,16 +93,22 @@ $$\operatorname{eff}(t) =
 
 ### 2.1 数学定义
 
-$$ f(x, y)* g(x, y) = \int_{\tau_1=-\infty}^\infty \int_{\tau_2=-\infty}^{\infty} f(\tau_1, \tau_2) \cdot g(x-\tau_1, y-\tau_2)\,d\tau_1 d\tau_2 \tag{2} $$
+$$
+f(x, y)* g(x, y) = \int_{\tau_1=-\infty}^\infty \int_{\tau_2=-\infty}^{\infty} f(\tau_1, \tau_2) \cdot g(x-\tau_1, y-\tau_2)\,d\tau_1 d\tau_2 \tag{2} 
+$$
 
 二维卷积在图像处理中会经常遇到，图像处理中用到的大多是二维卷积的离散形式：
 
-$$ f[x,y] * g[x,y] = \sum_{n_1=-\infty}^\infty \sum_{n_2=-\infty}^\infty f[n_1, n_2] \cdot g[x-n_1, y-n_2] \tag{3} $$
+$$
+f[x,y] * g[x,y] = \sum_{n_1=-\infty}^\infty \sum_{n_2=-\infty}^\infty f[n_1, n_2] \cdot g[x-n_1, y-n_2] \tag{3} 
+$$
 
 ### 2.2 图像处理中的二维卷积
 
 二维卷积就是一维卷积的扩展，原理差不多。核心还是**（反转），移动，乘积，求和**。这里二维的反转就是将卷积核沿反对角线翻转，比如：
-$$\begin{bmatrix} 
+
+$$
+\begin{bmatrix} 
     a & b & c \\
     d & e & f \\
     g & h & i \\
@@ -105,12 +117,15 @@ $$\begin{bmatrix}
     i & h & g \\
     f & e & d \\
     c & b & a \\
-    \end{bmatrix}$$
+    \end{bmatrix}
+$$
 
 之后，卷积核在二维平面上平移，并且卷积核的每个元素与被卷积图像对应位置相乘，再求和。通过卷积核的不断移动，我们就有了一个新的图像，这个图像完全由卷积核在各个位置时的乘积求和的结果组成。
 
 举一个最简单的均值滤波的例子：
-$$ \text{这是一个 3x3 的均值滤波核，也就是卷积核：}
+
+$$
+\text{这是一个 3x3 的均值滤波核，也就是卷积核：}
 \begin{bmatrix}
     1/9 & 1/9 & 1/9 \\
     1/9 & 1/9 & 1/9 \\

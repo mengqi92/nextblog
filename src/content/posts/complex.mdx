@@ -59,7 +59,10 @@ modifiedDate: "2015-10-06T14:47:16.000Z"
 如此，一个复数就又多了一种指数的表示形式，即复指数形式：$r e^{i\theta} = r \cos\theta + r*i \sin\theta$。
 
 而当 $r=1$，$\theta=\pi$ 时，对应的直角坐标刚好就是 $(-1, 0)$ ，也就是实数 -1。由此就有了那个著名的「欧拉公式」：
-$$e^{i\pi}+1=0$$
+
+$$
+e^{i\pi}+1=0
+$$
 
 ### 3.1 复数波和实数波
 
@@ -70,14 +73,22 @@ $$e^{i\pi}+1=0$$
 从示意图中，可以看出，当俯视复数波时，观察到的投影即是一个实数波，即是 $e^{i\theta}=\cos\theta + i* \sin\theta$ 的实部：$\cos\theta$；当从左侧侧视复数波时，得到的投影即是其虚部：$\sin\theta$。
 
 事实上，复数波的完整定义为：
-$$ Ae^{i(\omega t+\phi)} = Ae^{i(2\pi f t+\phi)} = A\cos(2\pi f t+\phi) + iA\sin(2\pi f t+\phi) $$
+
+$$
+Ae^{i(\omega t+\phi)} = Ae^{i(2\pi f t+\phi)} = A\cos(2\pi f t+\phi) + iA\sin(2\pi f t+\phi) 
+$$
+
 其中，$A$为振幅，$\omega$为角速度，$f$为频率，$\phi$为初试相位，这个波的强度（magnitude）为 $A = \sqrt{A^2 \cdot \cos^2(2\pi f t+\phi) + A^2 \cdot \sin^2(2\pi f t+\phi)}$，瞬时相位（phase）为 $2\pi f t + \phi$。
 
 由于复指数形式的复数波$e^{i\theta}$相较于$\cos(\theta)+i\sin(\theta)$更简单且更易于控制，因而在信号处理中得到广泛的使用。除此之外，$e^{i\theta}$形式可以看作是实数波的基础，因为我们可以组合两个复数波来得到$\cos(\theta)$和$\sin(\theta)$：
 
-$$\cos(\theta)=\frac{e^{i\theta}+e^{-i\theta}}{2}$$
-$$\sin(\theta)=\frac{e^{i\theta}-e^{-i\theta}}{2i}$$
-    
+$$
+\cos(\theta)=\frac{e^{i\theta}+e^{-i\theta}}{2}
+$$
+$$
+\sin(\theta)=\frac{e^{i\theta}-e^{-i\theta}}{2i}
+$$
+   
 另外，在信号处理中，我们只需要考虑实部的线性运算，因此，在我们对一个复数波进行滤波后，得到的复数波可以分解为 $\cos$ 和 $\sin$ 的形式，进而只需要选取实部所对应的 $\cos$ 部分就行了。
 
 在傅里叶变换中，便是将任意非周期函数分解为了各种复数波叠加的形式，因而傅里叶变换的公式中才会有类似 $e^{ix}$ 的形式。

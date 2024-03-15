@@ -12,7 +12,9 @@ modifiedDate: 2021-02-23 22:27:19
 
 在[上一篇文章](/posts/personal-finance-101-rate-of-return)}，我们介绍了净现值 NPV，用来表示未来现金流在当前时刻的折现值。它的公式是：
 
-$$NPV=\sum^n_{t=1}\frac{R_t}{(1+i)^t}$$
+$$
+NPV=\sum^n_{t=1}\frac{R_t}{(1+i)^t}
+$$
 
 其中，t 为期数，i 为折现率。
 
@@ -116,11 +118,15 @@ def xnpv(dates: List[datetime.datetime], cashflows: List[float], rate: float) ->
 
 为了方便计算，我们可以规定传入的 `rate` 为年化收益率，再在函数内部将其转换为每期（即每天）的收益率：
 
-$$\text{每期收益率} = (1+\text{年化收益率})^{\frac{1}{365}} - 1$$
+$$
+\text{每期收益率} = (1+\text{年化收益率})^{\frac{1}{365}} - 1
+$$
 
 代入到 NPV 公式中，就是：
 
-$$NPV=\sum^n_{t=1}\frac{R_t}{(1+i)^\frac{t}{365}}$$
+$$
+NPV=\sum^n_{t=1}\frac{R_t}{(1+i)^\frac{t}{365}}
+$$
 
 其中 i 为年化收益率。
 
