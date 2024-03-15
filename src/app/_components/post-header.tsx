@@ -1,3 +1,5 @@
+'use client'
+
 import DateFormatter from "./date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
 import { Chip } from "@nextui-org/react";
