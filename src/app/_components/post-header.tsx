@@ -27,7 +27,7 @@ export function PostHeader({ post }: Props) {
           </p>
           <p className="">
             {post.tags && post.tags.map(t => (
-              <Chip key={t} className="mr-1" variant="flat">{t}</Chip>
+              <Link key={t} href="/tags/[tag]" as={`/tags/${encodeURIComponent(t)}`}>{t}</Link>
             ))}
           </p>
         </div>
