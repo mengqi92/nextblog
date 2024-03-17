@@ -1,3 +1,5 @@
+import { withContentlayer } from 'next-contentlayer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // show remote images
@@ -14,4 +16,4 @@ const nextConfig = {
     pageExtensions: ['js', 'jsx', 'mdx', 'md', 'ts', 'tsx'],
 }
 
-export default nextConfig;
+export default withContentlayer(nextConfig);
