@@ -5,6 +5,7 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
+import remarkToc from 'remark-toc'
 import remarkMermaid from 'remark-mermaidjs'
 
 const Post = defineDocumentType(() => ({
@@ -71,6 +72,7 @@ export default makeSource({
         remarkPlugins: [
             remarkGfm, 
             remarkMath,
+            remarkToc,
             remarkMermaid as any
         ],
         rehypePlugins: [
