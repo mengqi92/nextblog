@@ -4,6 +4,7 @@ import DateFormatter from "./date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
 import { Chip, Divider } from "@nextui-org/react";
 import { Post } from "contentlayer/generated";
+import Link from "next/link";
 
 type Props = {
   post: Post;
@@ -18,7 +19,7 @@ export function PostHeader({ post }: Props) {
           <p className="justify-between">
             <DateFormatter dateString={post.createdDate} />
             <Divider orientation="vertical" />
-            <Chip color="primary">{post.category}</Chip>
+            <Link href="/categories/[slug]" as={`/categories/${encodeURIComponent(post.category)}`}>{post.category}</Link>
             <Divider orientation="vertical" />
             <span id="busuanzi_container_page_pv">
               本文总阅读量<span id="busuanzi_value_page_pv"></span>次
