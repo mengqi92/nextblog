@@ -23,12 +23,7 @@ const page = ({params}: PageProps) => {
       <Container>
         <Header />
         <article className="prose mx-auto md:prose-lg lg:prose-xl dark:prose-invert mb-32">
-          <PostHeader
-            title={post!.title!}
-            date={post!.createdDate}
-            category={post!.category}
-            tags={post!.tags}
-            />
+          <PostHeader post={post} />
           <MarkdownPost code={post!.body.code}/>
         </article>
       </Container>
