@@ -22,7 +22,7 @@ const page = ({params}: PageProps) => {
     <main>
       <Container>
         <Header />
-        <article className="prose md:prose-lg lg:prose-xl dark:prose-invert mb-32">
+        <article className="prose mx-auto md:prose-lg lg:prose-xl dark:prose-invert mb-32">
           <PostHeader
             title={post!.title!}
             date={post!.createdDate}
