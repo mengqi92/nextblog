@@ -2,7 +2,6 @@
 
 import DateFormatter from "./date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
-import { Chip, Divider } from "@nextui-org/react";
 import { Post } from "contentlayer/generated";
 import Link from "next/link";
 

@@ -54,10 +54,8 @@ export default function RootLayout({
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       </head>
       <body className={`${inter.className} light:bg-slate-50 dark:bg-sky-950`}>
-        <Providers>
-          <div className="min-h-screen">{children}</div>
-          <Footer />
-        </Providers>
+        <div className="min-h-screen">{children}</div>
+        <Footer />
       </body>
     </html>
   );

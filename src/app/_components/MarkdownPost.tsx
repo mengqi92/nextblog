@@ -1,6 +1,5 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { MDXComponents } from "mdx/types";
-import { Button } from "@/components/ui/button"
 
 const components: MDXComponents = {
     // Allows customizing built-in components, e.g. to add styling.
