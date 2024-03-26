@@ -7,7 +7,7 @@ type Props = {
 
 const DateFormatter = ({ dateString }: Props) => {
   const date = parseISO(dateString);
-  return <time className="transition-colors group-hover:text-fg-hover-color" dateTime={dateString}>{format(date, "yyyy-MM-dd")}</time>;
+  return <time className="text-sm text-gray-500 transition-colors group-hover:text-fg-hover-color" dateTime={dateString}>{format(date, "yyyy-MM-dd")}</time>;
 };
 
 export default DateFormatter;

@@ -14,7 +14,7 @@ const components: MDXComponents = {
     code: ({children}) => <code className="relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">{children}</code>,
     lead: ({children}) => <p className="text-xl text-muted-foreground">{children}</p>,
     a: ({ children, href }) => (
-        <a href={href} className="text-blue-500 hover:text-blue-700">{children}</a>
+        <a href={href} className="text-indigo-500 hover:text-indigo-700">{children}</a>
     )
 };
 

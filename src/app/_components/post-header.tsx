@@ -38,7 +38,7 @@ export function PostHeader({ post }: Props) {
           </svg>
 
           {post.tags && post.tags.map(t => (
-            <div key={t} className="bg-blue-100 dark:bg-blue-800 rounded-full px-3 py-1 text-blue-700 dark:text-blue-300">
+            <div key={t} className="bg-indigo-100 dark:bg-indigo-800 rounded-full px-3 py-1 text-indigo-700 dark:text-indigo-300">
               <Link href="/tags/[tag]" as={`/tags/${encodeURIComponent(t)}`}>
                 {t}
               </Link>
