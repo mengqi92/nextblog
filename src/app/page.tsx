@@ -1,5 +1,4 @@
 import Container from "@/app/_components/container";
-import { Intro } from "@/app/_components/intro";
 import { MoreStories } from "@/app/_components/more-stories";
 import { allPosts } from 'contentlayer/generated'
 

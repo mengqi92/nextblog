@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Container from "../../_components/container";
-import Header from "../../_components/header";
 import { PostHeader } from "../../_components/post-header";
 import { allDocuments } from "../../../../.contentlayer/generated";
 import { MarkdownPost } from "@/app/_components/MarkdownPost";
@@ -21,7 +20,6 @@ const page = ({params}: PageProps) => {
   return (
     <main>
       <Container>
-        <Header />
         <article className="mx-auto max-w-3xl px-4 prose md:prose-lg lg:prose-xl dark:prose-invert mb-32">
           <PostHeader post={post} />
           <MarkdownPost code={post!.body.code}/>

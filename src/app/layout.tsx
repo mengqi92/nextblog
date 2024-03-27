@@ -1,9 +1,9 @@
 import Footer from "@/app/_components/footer";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Providers } from "./providers";
 
 import "./globals.css";
+import Header from "./_components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,6 +54,7 @@ export default function RootLayout({
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       </head>
       <body className={`${inter.className} light:bg-slate-50 dark:bg-sky-950`}>
+        <Header title="Mengqi's blog"/>
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
