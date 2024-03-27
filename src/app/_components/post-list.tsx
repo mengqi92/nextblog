@@ -1,7 +1,6 @@
 import { PostPreview } from "./post-preview";
 import { DocumentTypes, Post } from ".contentlayer/generated"
 import { parseISO, getYear } from 'date-fns';
-import Header from "./header";
 
 
 type Props = {
@@ -27,7 +26,7 @@ const groupPostsByYear = (posts: Post[]) => {
   return { sortedYears, groupedPosts };
 };
 
-export function MoreStories({ posts }: Props) {
+export function PostList({ posts }: Props) {
   const { sortedYears, groupedPosts } = groupPostsByYear(posts);
 
   return (

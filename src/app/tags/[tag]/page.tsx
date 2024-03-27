@@ -1,5 +1,5 @@
 import { PageProps } from ".next/types/app/layout";
-import { MoreStories } from "@/app/_components/more-stories";
+import { PostList } from "@/app/_components/post-list";
 import { allDocuments } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
@@ -21,7 +21,7 @@ const page = ({params}: PageProps) => {
     return (
         <>
             <h1>{tag}</h1>,
-            {posts && posts.length > 0 && <MoreStories posts={posts} />}
+            {posts && posts.length > 0 && <PostList posts={posts} />}
         </>
     );
 }

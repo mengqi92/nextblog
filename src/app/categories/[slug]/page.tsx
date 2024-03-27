@@ -1,5 +1,5 @@
 import { PageProps } from ".next/types/app/layout";
-import { MoreStories } from "@/app/_components/more-stories";
+import { PostList } from "@/app/_components/post-list";
 import { allDocuments } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
@@ -28,7 +28,7 @@ const page = ({ params }: PageProps) => {
                 </h1>
                 {posts && posts.length > 0 ? (
                     <div className="space-y-12">
-                        <MoreStories posts={posts} />
+                        <PostList posts={posts} />
                     </div>
                 ) : (
                     <p className="text-center text-gray-600">当前没有文章。</p>
