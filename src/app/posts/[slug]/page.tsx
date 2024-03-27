@@ -20,7 +20,7 @@ const page = ({params}: PageProps) => {
   return (
     <main>
       <Container>
-        <article className="mx-auto max-w-3xl px-4 prose md:prose-lg lg:prose-xl dark:prose-invert mb-32">
+        <article className="mx-auto max-w-3xl prose md:prose-lg lg:prose-xl dark:prose-invert mb-32">
           <PostHeader post={post} />
           <MarkdownPost code={post!.body.code}/>
         </article>

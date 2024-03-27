@@ -31,7 +31,7 @@ export function MoreStories({ posts }: Props) {
   const { sortedYears, groupedPosts } = groupPostsByYear(posts);
 
   return (
-    <div className="flex flex-col gap-3 mx-auto max-w-3xl px-4 prose md:prose-lg lg:prose-xl dark:prose-invert mb-32">
+    <div className="flex flex-col gap-3 mx-auto max-w-3xl prose md:prose-lg lg:prose-xl dark:prose-invert mb-32">
       {
         sortedYears.map((year: number) => {
           const posts = groupedPosts[year];
