@@ -51,7 +51,7 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <script defer src="https://vercount.one/js"></script>
       </head>
       <body className={`${inter.className} light:bg-slate-50 dark:bg-sky-950`}>
         <Header title="Mengqi's blog"/>
