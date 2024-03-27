@@ -4,27 +4,36 @@ type Props = {
   title: string;
 };
 
-const Header = ({title}: Props) => {
+const Header = ({ title }: Props) => {
   return (
     <>
-      <div className="flex justify-between items-center mb-20 mt-8 mx-auto">
+      <div className="flex justify-between items-center mb-20 mt-8 mx-auto max-w-3xl">
         <div className="flex-grow text-center">
           <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight">
-            <Link href="/" className="decoration-indigo-500 hover:text-indigo-500 transition-colors duration-300">
+            <Link href="/" className="hover:text-red-600 transition-colors duration-300">
               {title}
             </Link>
           </h2>
         </div>
-        <div className=" mr-8">
-          <a href="https://github.com" className="flex items-center gap-2">
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-slate-900">
-              <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.463 2 11.97c0 4.404 2.865 8.14 6.839 9.458.5.092.682-.216.682-.48 0-.236-.008-.864-.013-1.695-2.782.602-3.369-1.337-3.369-1.337-.454-1.151-1.11-1.458-1.11-1.458-.908-.618.069-.606.069-.606 1.003.07 1.531 1.027 1.531 1.027.892 1.524 2.341 1.084 2.91.828.092-.643.35-1.083.636-1.332-2.22-.251-4.555-1.107-4.555-4.927 0-1.088.39-1.979 1.029-2.675-.103-.252-.446-1.266.098-2.638 0 0 .84-.268 2.75 1.022A9.607 9.607 0 0 1 12 6.82c.85.004 1.705.114 2.504.336 1.909-1.29 2.747-1.022 2.747-1.022.546 1.372.202 2.386.1 2.638.64.696 1.028 1.587 1.028 2.675 0 3.83-2.339 4.673-4.566 4.92.359.307.678.915.678 1.846 0 1.332-.012 2.407-.012 2.734 0 .267.18.577.688.48 3.97-1.32 6.833-5.054 6.833-9.458C22 6.463 17.522 2 12 2Z"></path>
-            </svg>
-            GitHub
+        <div className="flex items-center gap-2">
+          <a href="https://github.com/mengqi92/mengqi92.github.io" className="group group-hover:text-red-700 transition-colors">
+            <span className="icon icon-tabler icon-tabler-brand-github-filled">
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github hover:fill-red-700 hover:stroke-red-700" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+              </svg>
+            </span>
+          </a>
+          <a href="https://twitter.com/mengqipei">
+            <span className="icon icon-tabler icon-tabler-brand-twitter-filled transition-colors group group-hover:text-red-700">
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-twitter hover:fill-red-700 hover:stroke-red-700" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+              </svg>
+            </span>
           </a>
         </div>
       </div>
-
     </>
   );
 };

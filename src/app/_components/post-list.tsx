@@ -30,13 +30,13 @@ export function PostList({ posts }: Props) {
   const { sortedYears, groupedPosts } = groupPostsByYear(posts);
 
   return (
-    <div className="flex flex-col gap-3 mx-auto max-w-3xl prose md:prose-lg lg:prose-xl dark:prose-invert mb-32">
+    <div className="flex flex-col gap-2 mx-auto max-w-3xl divide-y divide-dashed prose md:prose-lg lg:prose-xl dark:prose-invert">
       {
         sortedYears.map((year: number) => {
           const posts = groupedPosts[year];
           return (
-            <section key={year} className="border-b border-b-zinc-200 pb-4">
-              <h2 className="mb-3 text-3xl">{year}</h2>
+            <section key={year} className="pb-4">
+              <h2 className="mt-4 text-3xl">{year}</h2>
               {posts.map((post: Post) => (
                 <PostPreview
                   key={post.slug}
