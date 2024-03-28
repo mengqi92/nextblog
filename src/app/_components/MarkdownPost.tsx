@@ -26,7 +26,7 @@ export function MarkdownPost({ code }: MarkdownPostProps) {
     const Component = useMDXComponent(code);
 
     return (
-        <article className="mdx">
+        <article className="mdx sm:mx-4">
             <Component components={components} />
         </article>
     )
