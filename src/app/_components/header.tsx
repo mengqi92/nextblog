@@ -9,8 +9,8 @@ const Header = ({ title }: Props) => {
     <>
       <div className="flex justify-between items-center mb-20 mt-8 mx-auto max-w-3xl">
         <div className="flex-grow text-center">
-          <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight">
-            <Link href="/" className="hover:text-red-600 transition-colors duration-300">
+          <h2 className="text-5xl md:text-4xl font-extrabold tracking-tight md:tracking-tighter leading-tight">
+            <Link href="/" className="hover:text-red-600 transition-colors duration-300 bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500">
               {title}
             </Link>
           </h2>

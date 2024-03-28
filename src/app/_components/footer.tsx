@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="flex items-center justify-center gap-8 p-4 text-sm bg-gray-100 border-t border-gray-200 text-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
       <p>
-        © 2015 - 2024 Mengqi | All rights reserved.
+        © 2015 - {new Date().getFullYear()} Mengqi | All rights reserved.
       </p>
       <div className="flex flex-col gap-2 md:flex-row md:gap-4">
         <span id="busuanzi_container_site_pv" className="flex items-center gap-1">
