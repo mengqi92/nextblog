@@ -23,6 +23,11 @@ const Post = defineDocumentType(() => ({
             description: 'The category of the post',
             required: true
         },
+        description: {
+            type: 'string',
+            description: 'The description of the post',
+            required: true
+        },
         tags: {
             type: 'list',
             of: { type: 'string' },
