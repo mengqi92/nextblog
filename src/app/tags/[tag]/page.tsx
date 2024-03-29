@@ -1,4 +1,4 @@
-import { PageProps } from ".next/types/app/layout";
+import { PageProps } from ".next/types/app/tags/[tag]/page";
 import { PostList } from "@/app/_components/post-list";
 import { allDocuments } from "contentlayer/generated";
 import { notFound } from "next/navigation";
