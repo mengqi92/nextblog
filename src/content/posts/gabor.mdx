@@ -8,6 +8,7 @@ tags:
   - Gabor
   - Gabor 特征
 category: 图像处理
+description: Gabor 特征是一种可以用来描述图像纹理信息的特征，Gabor 滤波器的频率和方向与人类的视觉系统类似，特别适合于纹理表示与判别。 Gabor 特征主要依靠 Gabor 核在频率域上对信号进行加窗，从而能描述信号的局部频率信息。 说到 Gabor 核，不能不提到傅里叶变换。正是靠傅里叶变换，我们才能将信号转换到频率域，才能让Gabor核在频率域去加窗。而在原本的空间域中，一个 Gabor 核实际上就是一个高斯核与正弦波调制的结果，可以看做是高斯核应用在了正弦波的频域部分。 上面说的还是比较笼统，下面我们一步一步介绍Gabor核是怎么对信号「加窗」的。
 coverImage: https://blog.mengqi.life/images/gabor/banner.jpeg
 math: true
 createdDate: 2015-10-11 17:02:00
