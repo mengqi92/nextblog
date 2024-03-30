@@ -1,4 +1,7 @@
+'use client'
+
 import Link from "next/link";
+import Obfuscate from 'react-obfuscate';
 
 type Props = {
   title: string;
@@ -16,6 +19,15 @@ const Header = ({ title }: Props) => {
           </h2>
         </div>
         <div className="flex items-center gap-2">
+          <Obfuscate email={'iepiqgnem'.split('').reverse().join('') + '@' + 'moc.liamg'.split('').reverse().join('')}>
+            <span className="icon icon-tabler icon-tabler-mail transition-colors group group-hover:text-red-600">
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail hover:stroke-red-600" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                <path d="M3 7l9 6l9 -6" />
+              </svg>
+            </span>
+          </Obfuscate>
           <a href="https://github.com/mengqi92/mengqi92.github.io" className="group group-hover:text-red-600 transition-colors">
             <span className="icon icon-tabler icon-tabler-brand-github-filled">
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github hover:fill-red-600 hover:stroke-red-600" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -33,7 +45,7 @@ const Header = ({ title }: Props) => {
             </span>
           </a>
           <a href="/api/atom.xml">
-            <span className="icon icon-tabler icon-tabler-rss-filled transition-colors group group-hover:text-red-600">
+            <span className="icon icon-tabler icon-tabler-rss transition-colors group group-hover:text-red-600">
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-rss hover:stroke-red-600" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
