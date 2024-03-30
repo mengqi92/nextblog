@@ -34,7 +34,7 @@ const Header = ({ title }: Props) => {
           </a>
           <a href="/api/atom.xml">
             <span className="icon icon-tabler icon-tabler-rss-filled transition-colors group group-hover:text-red-600">
-              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-rss hover:stroke-red-600" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-rss hover:stroke-red-600" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
                 <path d="M4 4a16 16 0 0 1 16 16" />
