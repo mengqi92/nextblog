@@ -2,8 +2,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "cl-dev": "contentlayer dev",
+    "dev": "next dev",
+    "build": "contentlayer build && next build",
     "start": "next start"
   },
   "dependencies": {
