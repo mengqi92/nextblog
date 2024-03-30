@@ -1,7 +1,6 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { allPosts } from "contentlayer/generated";
-import RSS from 'rss';
 import { Feed } from 'feed';
 
 export function cn(...inputs: ClassValue[]) {
