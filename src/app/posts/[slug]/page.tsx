@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Container from "../../_components/container";
 import { PostHeader } from "../../_components/post-header";
 import { allDocuments } from "../../../../.contentlayer/generated";
-import { MarkdownPost } from "@/app/_components/MarkdownPost";
+import { MarkdownPost } from "@/app/_components/markdown-post";
 import { PageProps } from ".next/types/app/posts/[slug]/page";
 import '@/lib/katex/katex.min.css'
 
