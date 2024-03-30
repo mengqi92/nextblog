@@ -32,10 +32,15 @@ const Header = ({ title }: Props) => {
               </svg>
             </span>
           </a>
-          <a href="/atom.xml">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-            </svg>
+          <a href="/api/atom.xml">
+            <span className="icon icon-tabler icon-tabler-rss-filled transition-colors group group-hover:text-red-600">
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-rss hover:stroke-red-600" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                <path d="M4 4a16 16 0 0 1 16 16" />
+                <path d="M4 11a9 9 0 0 1 9 9" />
+              </svg>
+            </span>
           </a>
         </div>
       </div>
