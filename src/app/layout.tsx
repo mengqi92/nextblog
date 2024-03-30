@@ -4,6 +4,9 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import Header from "./_components/header";
+import GoogleAnalytics from "./_components/google-analytics";
+import Script from "next/script";
+import Clarity from "./_components/microsoft-clarity";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <head>
+        <GoogleAnalytics />
+        <Clarity />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -51,10 +56,10 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <script defer src="https://vercount.one/js"></script>
+        <Script id="vercount-init" strategy="lazyOnload" src="https://vercount.one/js"></Script>
       </head>
       <body className={`${inter.className} light:bg-slate-50 dark:bg-sky-950`}>
-        <Header title="Mengqi's blog"/>
+        <Header title="Mengqi's blog" />
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
