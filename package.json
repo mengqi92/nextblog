@@ -4,7 +4,8 @@
   "scripts": {
     "cl-dev": "contentlayer dev",
     "dev": "next dev",
-    "build": "contentlayer build && next build",
+    "prebuild": "npx playwright install & contentlayer build",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
