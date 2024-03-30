@@ -4,7 +4,8 @@
   "scripts": {
     "cl-dev": "contentlayer dev",
     "dev": "next dev",
-    "prebuild": "npx playwright install & contentlayer build",
+    "postinstall": "npx playwright install",
+    "prebuild": "contentlayer build",
     "build": "next build",
     "start": "next start"
   },
