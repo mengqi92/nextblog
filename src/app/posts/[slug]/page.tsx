@@ -44,11 +44,21 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title}`;
-
   return {
+    title: post.title,
+    description: post.description,
     openGraph: {
-      title,
+      type: 'article',
+      title: post.title,
+      description: post.description,
+      images: post.coverImage ? [post.coverImage] : [],
     },
+    keywords: post.tags,
+    twitter: {
+      card: 'summary',
+      site: '@mengqipei',
+      creator: 'Mengqi Pei',
+      images: post.coverImage ? [post.coverImage] : [],
+    }
   };
 }

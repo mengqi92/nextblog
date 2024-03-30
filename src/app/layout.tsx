@@ -13,6 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: `Mengqi's Blog`,
   description: `Mengqi's blog`,
+  keywords: ['图像处理', 'git', '线性代数', '机器学习', '编程', '个人财务']
 };
 
 export default function RootLayout({
@@ -25,11 +26,6 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
         <Clarity />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
         <link
           rel="icon"
           type="image/png"
@@ -48,7 +44,7 @@ export default function RootLayout({
           href="/favicon/safari-pinned-tab.svg"
           color="#000000"
         />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon/favicon-16x16.png" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"
