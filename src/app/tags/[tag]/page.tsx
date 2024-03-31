@@ -15,7 +15,7 @@ function getPostsByTag(tag: string) {
     return posts;
 }
 
-const page = ({ params }: PageProps) => {
+export default function page({ params }: { params: { tag: string } }) {
     const tag = decodeURIComponent(params.tag);
     const posts = getPostsByTag(tag)
     return (
@@ -43,4 +43,17 @@ const page = ({ params }: PageProps) => {
     );
 }
 
-export default page;
+export async function generateStaticParams() {
+    const allTags = new Set<string>();
+
+    allDocuments.forEach(doc => {
+        doc.tags.forEach(tag => {
+            allTags.add(tag);
+        });
+    });
+
+    return Array.from(allTags).map(tag => ({
+        params: { tag }
+    }));
+
+}
