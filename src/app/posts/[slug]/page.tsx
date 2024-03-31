@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import Container from "../../_components/container";
 import { PostHeader } from "../../_components/post-header";
 import { MarkdownPost } from "@/app/_components/markdown-post";
-import { PageProps } from ".next/types/app/posts/[slug]/page";
 import { allDocuments } from 'contentlayer/generated';
 import '@/lib/katex/katex.min.css'
 
@@ -15,7 +14,7 @@ function getPostBySlug(slug: string) {
   return doc;
 }
 
-export default function page({params}: PageProps) {
+export default function page({params}: { params: { slug: string }}) {
   const post = getPostBySlug(params.slug);
   return (
     <main>
@@ -29,7 +28,7 @@ export default function page({params}: PageProps) {
   )
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
+export function generateMetadata({ params }: { params: { slug: string }}): Metadata {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
